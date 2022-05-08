@@ -20,7 +20,7 @@ $products_miki = [
 
 $registeredUser_miki = new registeredUser('miki','cola','mikicola@mail.it','Via della Pigna 7 - 12378 Paesesperduto', 'passwordSuperSicura');
 
-$creditCard_miki = new CreditCard ('miki','cola','1111 2222 3333 4444', '08', '2023');
+$creditCard_miki = new CreditCard ('miki','cola','1111 2222 3333 4444', '2022-08-01');
 
 var_dump($products_miki);
 var_dump($registeredUser_miki);

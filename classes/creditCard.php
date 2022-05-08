@@ -3,15 +3,14 @@ class creditCard{
     private $firstname;
     private $lastname;
     private $cardNumber;
-    private $expMonth;
-    private $expYear;
+    private $expirationCreditCard;
 
-    public function __construct($_firstname, $_lastname, $_cardNumber, $_expMonth, $_expYear){
+    public function __construct($_firstname, $_lastname, $_cardNumber, $_expirationCreditCard){
         $this->firstname = $_firstname;
         $this->lastname = $_lastname;
         $this->cardNumber = $_cardNumber;
-        $this->expMonth = $_expMonth;
-        $this->expYear = $_expYear;
+        $this->expirationCreditCard = $_expirationCreditCard;
+        $this->setExpirationCreditCard ($this->expirationCreditCard);
     }
 
     public function getFirstName(){
@@ -26,17 +25,24 @@ class creditCard{
         return $this->cardNumber;
     }
     
-    public function getExpMonth(){
-        return $this->expMonth;
+    // public function getExpMonth(){
+    //     return $this->expMonth;
+    // }
+
+    // public function getExpYear(){
+    //     return $this->expYear;
+    // }
+
+    public function getExpirationCreditCard(){
+        return $this->expirationCreditCard;
     }
 
-    public function getExpYear(){
-        return $this->expYear;
-    }
 
-
-
-    public function verifyCreditCard(){
-
+    public function setExpirationCreditCard($expirationCreditCard){
+        if (strtotime($expirationCreditCard) < strtotime('now')) {
+            echo "<h2>Carta di credito scaduta</h2>";
+        } else {
+            echo "<h2>Carta di credito valida</h2>";
+        }
     }
 }

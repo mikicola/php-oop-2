@@ -7,10 +7,11 @@ class User{
     protected $discount = 0;
     
 
-    public function __construct(string $_firstname, string $_lastname, string $_email){
+    public function __construct(string $_firstname, string $_lastname, string $_email, string $_address){
         $this->firstname = $_firstname;
         $this->lastname = $_lastname;
         $this->email = $_email;
+        $this->address = $_address;
 
         return $this;
     }
