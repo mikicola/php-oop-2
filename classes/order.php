@@ -5,7 +5,7 @@ class order{
     protected $products = [];
     protected $creditCard;
 
-    public function __construct($user, $products, $creditCard){
+    public function __construct($_user, $_products, $_creditCard){
         $this->user = $_user;
         $this->products = $_products;
         $this->creditCard = $_creditCard;
